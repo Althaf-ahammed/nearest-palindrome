@@ -1,0 +1,17 @@
+def nearest_palindrome(number):
+    
+    while(True):
+        temp=number
+        rev=0
+        while(number!=0):
+            dig=number%10
+            rev=rev*10+dig
+            number=number//10
+        if(temp==rev):
+            return temp
+        else:
+            temp=temp+1
+            number=temp
+
+number=12331
+print(nearest_palindrome(number))
